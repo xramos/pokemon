@@ -14,7 +14,10 @@ struct PokemonApp: App {
         
         WindowGroup {
             
-            PokemonWorldView()
+            NavigationView {
+                
+                TabBar()
+            }
         }
     }
 }
