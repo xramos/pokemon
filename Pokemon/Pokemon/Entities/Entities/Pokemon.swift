@@ -16,6 +16,5 @@ struct Pokemon: Identifiable {
     let experience: Int
     let url: String
     let date: String
-    
-    let types: [PokemonType]
+    let types: String
 }

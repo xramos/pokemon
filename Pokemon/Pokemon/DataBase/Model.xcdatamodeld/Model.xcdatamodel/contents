@@ -6,18 +6,11 @@
         <attribute name="height" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="types" optional="YES" attributeType="String"/>
         <attribute name="url" optional="YES" attributeType="String"/>
         <attribute name="weight" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="types" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DBPokemonType" inverseName="pokemon" inverseEntity="DBPokemonType"/>
-    </entity>
-    <entity name="DBPokemonType" representedClassName="DBPokemonType" syncable="YES" codeGenerationType="class">
-        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="slot" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="pokemon" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DBPokemon" inverseName="types" inverseEntity="DBPokemon"/>
     </entity>
     <elements>
         <element name="DBPokemon" positionX="-63" positionY="-18" width="128" height="149"/>
-        <element name="DBPokemonType" positionX="-54" positionY="27" width="128" height="89"/>
     </elements>
 </model>

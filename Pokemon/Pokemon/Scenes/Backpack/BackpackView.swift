@@ -82,6 +82,7 @@ struct BackpackView: View {
                             BackPackCardView(name: pokemon.name,
                                              image: pokemon.url)
                         }
+                        .buttonStyle(PlainButtonStyle())
                     }
                 }
             }

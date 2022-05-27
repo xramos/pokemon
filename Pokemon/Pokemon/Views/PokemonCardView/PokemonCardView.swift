@@ -28,16 +28,16 @@ struct PokemonCardView: View {
             
             ImageView(withURL: image)
             
-            Text(name)
-                .bold()
-            
-            Spacer().frame(height: 4)
-            
-            Text("weight: \(weight)")
-            
-            Spacer().frame(height: 4)
-            
-            Text("height: \(height)")
+            VStack(alignment: .leading, spacing: 4) {
+                
+                TitleView(title: name)
+                
+                TitleValueView(title: "Weight:",
+                               value: "\(weight)")
+                
+                TitleValueView(title: "Height:",
+                               value: "\(height)")
+            }
             
             Spacer().frame(height: 10)
             

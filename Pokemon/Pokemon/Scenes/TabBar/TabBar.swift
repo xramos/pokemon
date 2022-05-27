@@ -11,6 +11,17 @@ struct TabBar: View {
     
     @State var activeTab: Tab = .pokemonWorld
     
+    init() {
+
+        let tabBarAppearance = UITabBarAppearance()
+        tabBarAppearance.backgroundColor = UIColor(named: "pokemonYellow")
+        tabBarAppearance.shadowColor = UIColor.gray
+        tabBarAppearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.black]
+        tabBarAppearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.white]
+        UITabBar.appearance().standardAppearance = tabBarAppearance
+        UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+    }
+    
     var body: some View {
         
         TabView(selection: $activeTab) {

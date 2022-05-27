@@ -20,9 +20,17 @@ struct ServerPokemon: Codable {
     
     func convertToEntity() -> Pokemon {
         
-        var pokemonTypes: [PokemonType] = []
+        var pokemonTypes: String = ""
+        
         if let types = types {
-            pokemonTypes = types.map({ $0.convertToEntity() })
+            
+            for type in types {
+                
+                pokemonTypes = "\(pokemonTypes), \(type.type.name)"
+            }
+            
+            pokemonTypes.remove(at: pokemonTypes.startIndex)
+            pokemonTypes.remove(at: pokemonTypes.startIndex)
         }
         
         return Pokemon(id: id,

@@ -15,29 +15,30 @@ struct PokemonDetailView: View {
         
         VStack {
             
-            VStack {
+            VStack(alignment: .center) {
                 
                 ImageView(withURL: viewModel.pokemon.url)
                 
                 VStack(alignment: .leading, spacing: 4) {
                     
-                    Text(viewModel.pokemon.name)
-                        .bold()
+                    TitleView(title: viewModel.pokemon.name)
                     
-                    Text("weight: \(viewModel.pokemon.weight)")
+                    TitleValueView(title: "Weight:", value: "\(viewModel.pokemon.weight)")
                     
-                    Text("height: \(viewModel.pokemon.height)")
+                    TitleValueView(title: "Height: ", value: "\(viewModel.pokemon.height)")
                     
-                    Text("Experience: \(viewModel.pokemon.experience)")
+                    TitleValueView(title: "Experience:", value: "\(viewModel.pokemon.experience)")
                     
-                    Text("Caught on: \(viewModel.pokemon.date)")
+                    TitleValueView(title: "Caught on:", value: "\(viewModel.pokemon.date)")
+                    
+                    TitleValueView(title: "Types:", value: "\(viewModel.pokemon.types)")
                     
                     Spacer().frame(height: 10)
                 }
                 .padding([.leading, .trailing, .bottom], 10)
             }
             .pokemonBackground()
-            .padding(20)
+            .padding(.bottom, 20)
         }
     }
 }
@@ -53,7 +54,7 @@ struct PokemonDetailView_Previews: PreviewProvider {
                               experience: 0,
                               url: "",
                               date: "",
-                              types: [])
+                              types: "")
         
         PokemonDetailView(viewModel: PokemonDetailViewModel(pokemon: pokemon))
     }

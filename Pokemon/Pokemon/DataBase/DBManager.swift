@@ -38,15 +38,7 @@ class DBManager: Persistence {
         dbPokemon.experience = Int16(pokemon.experience)
         dbPokemon.url = pokemon.url
         dbPokemon.date = dateString
-        
-        // Create and assign DBPokemonTypes
-        for type in pokemon.types {
-            let dbPokemonType = DBPokemonType(context: coreDataStack.managedContext)
-            dbPokemonType.id = UUID()
-            dbPokemonType.slot = Int16(type.slot)
-            dbPokemonType.name = type.name
-            dbPokemonType.pokemon = dbPokemon
-        }
+        dbPokemon.types = pokemon.types
         
         // Save DBEntitites
         coreDataStack.saveContext()

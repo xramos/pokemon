@@ -24,8 +24,7 @@ struct BackPackCardView: View {
             
             ImageView(withURL: image)
             
-            Text(name)
-                .bold()
+            TitleView(title: name)
             
             Spacer().frame(height: 10)
             

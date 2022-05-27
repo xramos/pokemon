@@ -12,13 +12,6 @@ extension DBPokemon {
     
     func convertToEntity() -> Pokemon {
         
-        var pokemonTypes: [PokemonType] = []
-        
-        if let types = types, let dbPokemonTypes = types.allObjects as? [DBPokemonType] {
-            
-            pokemonTypes = dbPokemonTypes.map({ $0.convertToEntity() })
-        }
-        
         return Pokemon(id: Int(id),
                        name: name ?? "",
                        weight: Int(weight),
@@ -26,6 +19,6 @@ extension DBPokemon {
                        experience: Int(experience),
                        url: url ?? "",
                        date: date ?? "",
-                       types: pokemonTypes)
+                       types: types ?? "")
     }
 }

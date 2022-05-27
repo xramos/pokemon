@@ -19,7 +19,7 @@ class PokemonDetailViewModel: ObservableObject {
                                                        experience: 0,
                                                        url: "",
                                                        date: "",
-                                                       types: [])
+                                                       types: "")
     
     // MARK: - Methods
  

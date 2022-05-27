@@ -135,7 +135,6 @@ struct PokemonWorldView: View {
                     self.viewModel.caughtPokemon()
                 }
                 .disabled(viewModel.isCatched ? true : false)
-                //.opacity(viewModel.isCatched ? 0.3 : 1.0)
                 .blur(radius: viewModel.isCatched ? 4 : 0)
             }
             
