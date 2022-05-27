@@ -9,5 +9,5 @@ import Foundation
 
 struct ServerSprite: Codable {
     
-    let front_default: String
+    let frontDefault: String
 }

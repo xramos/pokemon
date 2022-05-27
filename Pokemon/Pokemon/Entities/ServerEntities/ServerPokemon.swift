@@ -13,7 +13,7 @@ struct ServerPokemon: Codable {
     let name: String
     let weight: Int
     let height: Int
-    let base_experience: Int
+    let baseExperience: Int
     
     let sprites: ServerSprite
     let types: [ServerTypes]?
@@ -29,8 +29,8 @@ struct ServerPokemon: Codable {
                        name: name,
                        weight: weight,
                        height: height,
-                       experience: base_experience,
-                       url: sprites.front_default,
+                       experience: baseExperience,
+                       url: sprites.frontDefault,
                        date: "",
                        types: pokemonTypes)
     }
