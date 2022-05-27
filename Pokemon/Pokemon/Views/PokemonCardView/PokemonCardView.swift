@@ -26,20 +26,22 @@ struct PokemonCardView: View {
         
         VStack {
             
-            Image("")
+            ImageView(withURL: image)
             
             Text(name)
+                .bold()
+            
+            Spacer().frame(height: 4)
             
             Text("weight: \(weight)")
             
+            Spacer().frame(height: 4)
+            
             Text("height: \(height)")
             
-        }.background(RoundedRectangle(cornerRadius: 4)
-            .foregroundColor(Color("pokemonYellow"))
-            .shadow(color: Color.gray,
-                    radius: 2,
-                    x: 0,
-                    y: 2))
+            Spacer().frame(height: 10)
+            
+        }.pokemonBackground()
         .padding(10)
     }
 }

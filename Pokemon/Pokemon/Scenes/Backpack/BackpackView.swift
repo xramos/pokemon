@@ -77,8 +77,11 @@ struct BackpackView: View {
                     
                     ForEach(viewModel.pokemons) { pokemon in
                         
-                        BackPackCardView(name: pokemon.name,
-                                         image: pokemon.url)
+                        NavigationLink(destination: PokemonDetailView(viewModel: PokemonDetailViewModel(pokemon: pokemon))) {
+                            
+                            BackPackCardView(name: pokemon.name,
+                                             image: pokemon.url)
+                        }
                     }
                 }
             }

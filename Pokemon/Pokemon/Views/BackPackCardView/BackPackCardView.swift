@@ -22,16 +22,14 @@ struct BackPackCardView: View {
         
         VStack {
             
-            Image("")
+            ImageView(withURL: image)
             
             Text(name)
+                .bold()
             
-        }.background(RoundedRectangle(cornerRadius: 4)
-            .foregroundColor(Color("pokemonYellow"))
-            .shadow(color: Color.gray,
-                    radius: 2,
-                    x: 0,
-                    y: 2))
+            Spacer().frame(height: 10)
+            
+        }.pokemonBackground()
         .padding(10)
     }
 }

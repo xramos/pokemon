@@ -25,7 +25,7 @@ struct TabBar: View {
             BackpackView()
                 .tabItem( {
                     
-                    Text("Backpack")
+                    Text("Pokedex")
                 })
                 .tag(Tab.backpack)
         }

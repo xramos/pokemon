@@ -16,6 +16,8 @@ class PokemonWorldViewModel: ObservableObject {
     @Published var state: PokemonWorldViewState = .empty
     @Published public private(set) var pokemon: Pokemon?
     @Published public private(set) var isCatched: Bool = false
+    @Published public var showToast = false
+    @Published public var messageToast = ""
     
     private var cancellable: AnyCancellable?
     
@@ -41,6 +43,7 @@ class PokemonWorldViewModel: ObservableObject {
                 case .finished:
                     self.state = .loaded
                     self.isPokemonCatched()
+                    self.showToastWithMessage(message: "Found Pokémon!")
                 case .failure(let error):
                     self.state = .failed("Get Pokémon Failed!")
                     print("Get Pokemon failed \(error), \(error.localizedDescription)")
@@ -63,8 +66,15 @@ class PokemonWorldViewModel: ObservableObject {
             
             SavePokemonUseCase().execute(pokemon: pokemon!)
             
-            // Show message pokemon caught!
+            showToastWithMessage(message: "Pokémon Caught!")
             
+            isPokemonCatched()
         }
+    }
+    
+    func showToastWithMessage(message: String) {
+        
+        messageToast = message
+        showToast = true
     }
 }
