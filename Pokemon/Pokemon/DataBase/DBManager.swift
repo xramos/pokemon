@@ -25,6 +25,11 @@ class DBManager: Persistence {
     
     func savePokemon(pokemon: Pokemon) {
         
+        // Date when the pokemon has been caught!
+        let dateFormatter = DateFormatter.shortTotalWithLocale
+        let dateString = dateFormatter.string(from: Date())
+        
+        // Create DBPokemon
         let dbPokemon = DBPokemon(context: coreDataStack.managedContext)
         dbPokemon.id = Int64(pokemon.id)
         dbPokemon.name = pokemon.name
@@ -32,7 +37,9 @@ class DBManager: Persistence {
         dbPokemon.height = Int16(pokemon.height)
         dbPokemon.experience = Int16(pokemon.experience)
         dbPokemon.url = pokemon.url
+        dbPokemon.date = dateString
         
+        // Create and assign DBPokemonTypes
         for type in pokemon.types {
             let dbPokemonType = DBPokemonType(context: coreDataStack.managedContext)
             dbPokemonType.id = UUID()
@@ -41,6 +48,7 @@ class DBManager: Persistence {
             dbPokemonType.pokemon = dbPokemon
         }
         
+        // Save DBEntitites
         coreDataStack.saveContext()
     }
     

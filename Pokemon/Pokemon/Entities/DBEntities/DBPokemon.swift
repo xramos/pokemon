@@ -25,6 +25,7 @@ extension DBPokemon {
                        height: Int(height),
                        experience: Int(experience),
                        url: url ?? "",
+                       date: date ?? "",
                        types: pokemonTypes)
     }
 }

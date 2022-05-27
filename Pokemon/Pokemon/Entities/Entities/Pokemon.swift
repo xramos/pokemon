@@ -15,6 +15,7 @@ struct Pokemon {
     let height: Int
     let experience: Int
     let url: String
+    let date: String
     
     let types: [PokemonType]
 }

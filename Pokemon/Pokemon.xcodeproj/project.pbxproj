@@ -28,6 +28,7 @@
 		DAD0D3782840B7A000436272 /* ServerSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0D3772840B7A000436272 /* ServerSprite.swift */; };
 		DAD0D37A2840B82F00436272 /* DBPokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0D3792840B82F00436272 /* DBPokemon.swift */; };
 		DAD0D37C2840B85100436272 /* DBPokemonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0D37B2840B85100436272 /* DBPokemonType.swift */; };
+		DAD0D37F2840BEAA00436272 /* DateFormatter+Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0D37E2840BEAA00436272 /* DateFormatter+Pokemon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		DAD0D3772840B7A000436272 /* ServerSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerSprite.swift; sourceTree = "<group>"; };
 		DAD0D3792840B82F00436272 /* DBPokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBPokemon.swift; sourceTree = "<group>"; };
 		DAD0D37B2840B85100436272 /* DBPokemonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBPokemonType.swift; sourceTree = "<group>"; };
+		DAD0D37E2840BEAA00436272 /* DateFormatter+Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Pokemon.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		DAD0D31A283FC74100436272 /* Pokemon */ = {
 			isa = PBXGroup;
 			children = (
+				DAD0D37D2840BE7300436272 /* Extensions */,
 				DAD0D354283FCD2B00436272 /* API */,
 				DAD0D35A283FCD2B00436272 /* DataBase */,
 				DAD0D355283FCD2B00436272 /* Entities */,
@@ -239,6 +242,14 @@
 			children = (
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		DAD0D37D2840BE7300436272 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DAD0D37E2840BEAA00436272 /* DateFormatter+Pokemon.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,6 +384,7 @@
 			files = (
 				DAD0D361283FCF3D00436272 /* ServerType.swift in Sources */,
 				DAD0D3782840B7A000436272 /* ServerSprite.swift in Sources */,
+				DAD0D37F2840BEAA00436272 /* DateFormatter+Pokemon.swift in Sources */,
 				DAD0D36D283FD40100436272 /* HTTPError.swift in Sources */,
 				DAD0D3762840B6D800436272 /* Model.xcdatamodeld in Sources */,
 				DAD0D35F283FCF1500436272 /* ServerTypes.swift in Sources */,

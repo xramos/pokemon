@@ -31,6 +31,7 @@ struct ServerPokemon: Codable {
                        height: height,
                        experience: base_experience,
                        url: sprites.front_default,
+                       date: "",
                        types: pokemonTypes)
     }
 }
