@@ -25,6 +25,7 @@ class CoreDataStack {
     }()
     
     lazy var managedContext: NSManagedObjectContext = {
+        
         return storeContainer.viewContext
     }()
     

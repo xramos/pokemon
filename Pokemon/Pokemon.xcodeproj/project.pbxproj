@@ -29,6 +29,14 @@
 		DAD0D37A2840B82F00436272 /* DBPokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0D3792840B82F00436272 /* DBPokemon.swift */; };
 		DAD0D37C2840B85100436272 /* DBPokemonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0D37B2840B85100436272 /* DBPokemonType.swift */; };
 		DAD0D37F2840BEAA00436272 /* DateFormatter+Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0D37E2840BEAA00436272 /* DateFormatter+Pokemon.swift */; };
+		DAD0D3812840C29900436272 /* PokemonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0D3802840C29900436272 /* PokemonRepository.swift */; };
+		DAD0D3832840C45300436272 /* LocalPokemonDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0D3822840C45300436272 /* LocalPokemonDataSource.swift */; };
+		DAD0D3852840C4C800436272 /* RemotePokemonDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0D3842840C4C800436272 /* RemotePokemonDataSource.swift */; };
+		DAD0D3872840C65D00436272 /* PokemonRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0D3862840C65D00436272 /* PokemonRepositoryImplementation.swift */; };
+		DAD0D3892840C76700436272 /* GetPokemonUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0D3882840C76700436272 /* GetPokemonUseCase.swift */; };
+		DAD0D38B2840C7C600436272 /* SavePokemonUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0D38A2840C7C600436272 /* SavePokemonUseCase.swift */; };
+		DAD0D38D2840C7FE00436272 /* ExistsPokemonUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0D38C2840C7FE00436272 /* ExistsPokemonUseCase.swift */; };
+		DAD0D38F2840C83100436272 /* GetPokemonsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0D38E2840C83100436272 /* GetPokemonsUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +82,14 @@
 		DAD0D3792840B82F00436272 /* DBPokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBPokemon.swift; sourceTree = "<group>"; };
 		DAD0D37B2840B85100436272 /* DBPokemonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBPokemonType.swift; sourceTree = "<group>"; };
 		DAD0D37E2840BEAA00436272 /* DateFormatter+Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Pokemon.swift"; sourceTree = "<group>"; };
+		DAD0D3802840C29900436272 /* PokemonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRepository.swift; sourceTree = "<group>"; };
+		DAD0D3822840C45300436272 /* LocalPokemonDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPokemonDataSource.swift; sourceTree = "<group>"; };
+		DAD0D3842840C4C800436272 /* RemotePokemonDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePokemonDataSource.swift; sourceTree = "<group>"; };
+		DAD0D3862840C65D00436272 /* PokemonRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRepositoryImplementation.swift; sourceTree = "<group>"; };
+		DAD0D3882840C76700436272 /* GetPokemonUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPokemonUseCase.swift; sourceTree = "<group>"; };
+		DAD0D38A2840C7C600436272 /* SavePokemonUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePokemonUseCase.swift; sourceTree = "<group>"; };
+		DAD0D38C2840C7FE00436272 /* ExistsPokemonUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistsPokemonUseCase.swift; sourceTree = "<group>"; };
+		DAD0D38E2840C83100436272 /* GetPokemonsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPokemonsUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +183,10 @@
 		DAD0D353283FCD2B00436272 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				DAD0D3882840C76700436272 /* GetPokemonUseCase.swift */,
+				DAD0D38A2840C7C600436272 /* SavePokemonUseCase.swift */,
+				DAD0D38C2840C7FE00436272 /* ExistsPokemonUseCase.swift */,
+				DAD0D38E2840C83100436272 /* GetPokemonsUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -222,6 +242,10 @@
 		DAD0D359283FCD2B00436272 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				DAD0D3802840C29900436272 /* PokemonRepository.swift */,
+				DAD0D3822840C45300436272 /* LocalPokemonDataSource.swift */,
+				DAD0D3842840C4C800436272 /* RemotePokemonDataSource.swift */,
+				DAD0D3862840C65D00436272 /* PokemonRepositoryImplementation.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -386,17 +410,25 @@
 				DAD0D3782840B7A000436272 /* ServerSprite.swift in Sources */,
 				DAD0D37F2840BEAA00436272 /* DateFormatter+Pokemon.swift in Sources */,
 				DAD0D36D283FD40100436272 /* HTTPError.swift in Sources */,
+				DAD0D3852840C4C800436272 /* RemotePokemonDataSource.swift in Sources */,
 				DAD0D3762840B6D800436272 /* Model.xcdatamodeld in Sources */,
+				DAD0D3832840C45300436272 /* LocalPokemonDataSource.swift in Sources */,
+				DAD0D38D2840C7FE00436272 /* ExistsPokemonUseCase.swift in Sources */,
+				DAD0D3812840C29900436272 /* PokemonRepository.swift in Sources */,
 				DAD0D35F283FCF1500436272 /* ServerTypes.swift in Sources */,
 				DAD0D36B283FD3B300436272 /* APIManager.swift in Sources */,
+				DAD0D3892840C76700436272 /* GetPokemonUseCase.swift in Sources */,
 				DAD0D31C283FC74100436272 /* PokemonApp.swift in Sources */,
 				DAD0D352283FC7B000436272 /* Constants.swift in Sources */,
 				DAD0D3712840B50200436272 /* CoreDataStack.swift in Sources */,
+				DAD0D3872840C65D00436272 /* PokemonRepositoryImplementation.swift in Sources */,
 				DAD0D369283FD1A600436272 /* Pokemon.swift in Sources */,
 				DAD0D37A2840B82F00436272 /* DBPokemon.swift in Sources */,
 				DAD0D35D283FCD3A00436272 /* ServerPokemon.swift in Sources */,
 				DAD0D36F283FDA2F00436272 /* Persistence.swift in Sources */,
+				DAD0D38B2840C7C600436272 /* SavePokemonUseCase.swift in Sources */,
 				DAD0D367283FD0B400436272 /* PokemonType.swift in Sources */,
+				DAD0D38F2840C83100436272 /* GetPokemonsUseCase.swift in Sources */,
 				DAD0D3732840B60F00436272 /* DBManager.swift in Sources */,
 				DAD0D37C2840B85100436272 /* DBPokemonType.swift in Sources */,
 			);

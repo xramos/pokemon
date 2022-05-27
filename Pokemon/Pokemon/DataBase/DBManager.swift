@@ -52,6 +52,27 @@ class DBManager: Persistence {
         coreDataStack.saveContext()
     }
     
+    func existsPokemon(pokemon: Pokemon) -> Bool {
+        
+        let pokemonId = Int64(pokemon.id)
+        
+        let fetchRequest = NSFetchRequest<DBPokemon>(entityName: "DBPokemon")
+        fetchRequest.predicate = NSPredicate(format: "id==\(pokemonId)")
+        
+        do {
+            
+            let dbPokemons = try coreDataStack.managedContext.fetch(fetchRequest)
+            
+            return dbPokemons.first != nil
+            
+        } catch let error as NSError {
+            
+            print("Could not fetch pokemon with \(pokemonId). \(error), \(error.userInfo)")
+            
+            return false
+        }
+    }
+    
     func getPokemons() -> [Pokemon] {
         
         var pokemons: [Pokemon] = []

@@ -15,6 +15,11 @@ protocol Persistence {
     func savePokemon(pokemon: Pokemon)
     
     /**
+     Check if this pokemon already has been caught
+     */
+    func existsPokemon(pokemon: Pokemon) -> Bool
+    
+    /**
      Get all pokemons from DB
      */
     func getPokemons() -> [Pokemon]
