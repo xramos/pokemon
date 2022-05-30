@@ -14,6 +14,8 @@ struct ButtonView: View {
     private var width: CGFloat?
     private var action: () -> Void
     
+    @State private var pressed: Bool = false
+    
     init(imageName: String, text: String, width: CGFloat? = 80, action: @escaping () -> Void) {
         
         self.imageName = imageName
@@ -34,10 +36,20 @@ struct ButtonView: View {
             
             Text(text)
         }
-        .onTapGesture {
+        .background(pressed ? .gray.opacity(0.3) : .white)
+        .gesture(DragGesture(minimumDistance: 0.0)
+            .onChanged({ _ in
+                self.pressed = true
+            })
+                .onEnded({ _ in
+                    self.pressed = false
+                    self.action()
+                })
+        )
+        /*.onTapGesture {
             
             self.action()
-        }
+        }*/
     }
 }
 
