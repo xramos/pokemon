@@ -22,4 +22,16 @@ extension XCTestCase {
                        date: "",
                        types: "electric")
     }
+    
+    func getPokemonMock2() -> Pokemon {
+        
+        return Pokemon(id: 2,
+                       name: "bulbasur",
+                       weight: 4,
+                       height: 1,
+                       experience: 7,
+                       url: "url",
+                       date: "",
+                       types: "plant")
+    }
 }

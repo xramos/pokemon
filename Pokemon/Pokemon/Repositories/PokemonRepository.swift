@@ -10,7 +10,7 @@ import Combine
 
 protocol PokemonRepository {
     
-    func getPokemon() -> AnyPublisher<Pokemon, Error>
+    func getPokemon(id: Int) -> AnyPublisher<Pokemon, Error>
     
     func savePokemon(pokemon: Pokemon)
     func existsPokemon(pokemon: Pokemon) -> Bool

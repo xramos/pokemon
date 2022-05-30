@@ -35,7 +35,9 @@ class PokemonWorldViewModel: ObservableObject {
         
         state = .loading
         
-        cancellable = GetPokemonUseCase().execute()
+        let id: Int = Int.random(in: 1..<1000)
+        
+        cancellable = GetPokemonUseCase().execute(id: id)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
                 

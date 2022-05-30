@@ -16,7 +16,7 @@ class MockPokemonRepository: PokemonRepository {
     var isExistsPokemonCalled = false
     var isGetPokemonsCalled = false
     
-    func getPokemon() -> AnyPublisher<Pokemon, Error> {
+    func getPokemon(id: Int) -> AnyPublisher<Pokemon, Error> {
         
         self.isGetPokemonCalled = true
         

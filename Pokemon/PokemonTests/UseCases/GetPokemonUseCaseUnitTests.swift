@@ -31,7 +31,7 @@ class GetPokemoUseCasenUnitTests: XCTestCase {
         sut = GetPokemonUseCase(repository: repository)
         
         // When
-        _ = sut!.execute()
+        _ = sut!.execute(id: 1)
         
         // Then
         XCTAssertTrue(repository.isGetPokemonCalled)

@@ -17,8 +17,8 @@ class GetPokemonUseCase {
         self.repository = repository
     }
     
-    func execute() -> AnyPublisher<Pokemon, Error> {
+    func execute(id: Int) -> AnyPublisher<Pokemon, Error> {
         
-        return repository.getPokemon()
+        return repository.getPokemon(id: id)
     }
 }

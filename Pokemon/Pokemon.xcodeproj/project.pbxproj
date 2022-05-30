@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA2FBEAE2844CCB800170EE7 /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2FBEAD2844CCB800170EE7 /* URLProtocolMock.swift */; };
+		DA2FBEB02844CD0B00170EE7 /* RemotePokemonDataSourceUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2FBEAF2844CD0B00170EE7 /* RemotePokemonDataSourceUnitTests.swift */; };
+		DA2FBEB22844CF6B00170EE7 /* PokemonRepositoryImplementationUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2FBEB12844CF6B00170EE7 /* PokemonRepositoryImplementationUnitTests.swift */; };
+		DA2FBEB42844CFEA00170EE7 /* LocalPokemonDataSourceUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2FBEB32844CFEA00170EE7 /* LocalPokemonDataSourceUnitTests.swift */; };
 		DAD0D31C283FC74100436272 /* PokemonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0D31B283FC74100436272 /* PokemonApp.swift */; };
 		DAD0D320283FC74200436272 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD0D31F283FC74200436272 /* Assets.xcassets */; };
 		DAD0D323283FC74200436272 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD0D322283FC74200436272 /* Preview Assets.xcassets */; };
@@ -74,6 +78,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA2FBEAD2844CCB800170EE7 /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
+		DA2FBEAF2844CD0B00170EE7 /* RemotePokemonDataSourceUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePokemonDataSourceUnitTests.swift; sourceTree = "<group>"; };
+		DA2FBEB12844CF6B00170EE7 /* PokemonRepositoryImplementationUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRepositoryImplementationUnitTests.swift; sourceTree = "<group>"; };
+		DA2FBEB32844CFEA00170EE7 /* LocalPokemonDataSourceUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPokemonDataSourceUnitTests.swift; sourceTree = "<group>"; };
 		DAD0D318283FC74100436272 /* Pokemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD0D31B283FC74100436272 /* PokemonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonApp.swift; sourceTree = "<group>"; };
 		DAD0D31F283FC74200436272 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -439,6 +447,10 @@
 			isa = PBXGroup;
 			children = (
 				DAE2433428412D2400AD4FE1 /* MockPokemonRepository.swift */,
+				DA2FBEAD2844CCB800170EE7 /* URLProtocolMock.swift */,
+				DA2FBEAF2844CD0B00170EE7 /* RemotePokemonDataSourceUnitTests.swift */,
+				DA2FBEB12844CF6B00170EE7 /* PokemonRepositoryImplementationUnitTests.swift */,
+				DA2FBEB32844CFEA00170EE7 /* LocalPokemonDataSourceUnitTests.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -650,9 +662,13 @@
 				DAE2433128412A6B00AD4FE1 /* DBPokemonUnitTests.swift in Sources */,
 				DAE2432A2841261400AD4FE1 /* TestCoreDataStack.swift in Sources */,
 				DAE2434028412FC600AD4FE1 /* Pokemon+Mock.swift in Sources */,
+				DA2FBEB02844CD0B00170EE7 /* RemotePokemonDataSourceUnitTests.swift in Sources */,
 				DAE2433928412E7F00AD4FE1 /* GetPokemonsUseCaseUnitTests.swift in Sources */,
 				DAE2433728412DDF00AD4FE1 /* GetPokemonUseCaseUnitTests.swift in Sources */,
 				DAE2433328412BB800AD4FE1 /* ServerPokemonUnitTests.swift in Sources */,
+				DA2FBEB42844CFEA00170EE7 /* LocalPokemonDataSourceUnitTests.swift in Sources */,
+				DA2FBEAE2844CCB800170EE7 /* URLProtocolMock.swift in Sources */,
+				DA2FBEB22844CF6B00170EE7 /* PokemonRepositoryImplementationUnitTests.swift in Sources */,
 				DAE2433D28412F2D00AD4FE1 /* ExistsPokemonUseCaseUnitTests.swift in Sources */,
 				DAE2433528412D2400AD4FE1 /* MockPokemonRepository.swift in Sources */,
 				DAE2432C284126C600AD4FE1 /* DBManagerUnitTests.swift in Sources */,
