@@ -22,7 +22,7 @@ struct ImageView: View {
             
             Image(uiImage: image)
                 .resizable()
-                .aspectRatio(contentMode: .fill)
+                .aspectRatio(contentMode: .fit)
             
         }.onReceive(imageLoader.didChange) { data in
             

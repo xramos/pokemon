@@ -26,14 +26,10 @@ class BackpackViewModel: ObservableObject {
         state = .loading
         
         pokemons = GetPokemonsUseCase().execute()
+        
+        // Sort by id
+        pokemons = pokemons.sorted(by: { $0.id < $1.id })
             
-        if pokemons.isEmpty {
-            
-            state = .empty
-            
-        } else {
-            
-            state = .loaded
-        }
+        state = pokemons.isEmpty ? .empty : .loaded
     }
 }

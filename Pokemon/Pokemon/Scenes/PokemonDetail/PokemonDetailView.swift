@@ -13,32 +13,37 @@ struct PokemonDetailView: View {
     
     var body: some View {
         
-        VStack {
+        GeometryReader { proxy in
             
-            VStack(alignment: .center) {
+            HStack(alignment: .center) {
                 
-                ImageView(withURL: viewModel.pokemon.url)
+                Spacer()
                 
-                VStack(alignment: .leading, spacing: 4) {
+                VStack {
                     
-                    TitleView(title: viewModel.pokemon.name)
+                    ImageView(withURL: viewModel.pokemon.url)
+                        .frame(width: proxy.size.width * 0.7)
                     
-                    TitleValueView(title: "Weight:", value: "\(viewModel.pokemon.weight)")
-                    
-                    TitleValueView(title: "Height: ", value: "\(viewModel.pokemon.height)")
-                    
-                    TitleValueView(title: "Experience:", value: "\(viewModel.pokemon.experience)")
-                    
-                    TitleValueView(title: "Caught on:", value: "\(viewModel.pokemon.date)")
-                    
-                    TitleValueView(title: "Types:", value: "\(viewModel.pokemon.types)")
-                    
-                    Spacer().frame(height: 10)
+                    VStack(alignment: .leading, spacing: 4) {
+                        
+                        TitleView(title: viewModel.pokemon.name)
+                        
+                        TitleValueView(title: "Weight:", value: "\(viewModel.pokemon.weight)")
+                        
+                        TitleValueView(title: "Height: ", value: "\(viewModel.pokemon.height)")
+                        
+                        TitleValueView(title: "Experience:", value: "\(viewModel.pokemon.experience)")
+                        
+                        TitleValueView(title: "Caught on:", value: "\(viewModel.pokemon.date)")
+                        
+                        TitleValueView(title: "Types:", value: "\(viewModel.pokemon.types)")
+                    }
+                    .padding(20)
                 }
-                .padding([.leading, .trailing, .bottom], 10)
+                .pokemonBackground()
+                
+                Spacer()
             }
-            .pokemonBackground()
-            .padding(.bottom, 20)
         }
     }
 }
