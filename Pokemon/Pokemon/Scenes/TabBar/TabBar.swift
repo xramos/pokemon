@@ -18,6 +18,8 @@ struct TabBar: View {
         tabBarAppearance.shadowColor = UIColor.gray
         tabBarAppearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.black]
         tabBarAppearance.stackedLayoutAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.white]
+        tabBarAppearance.stackedLayoutAppearance.selected.iconColor = UIColor.black
+        tabBarAppearance.stackedLayoutAppearance.normal.iconColor = UIColor.white
         UITabBar.appearance().standardAppearance = tabBarAppearance
         UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
     }
@@ -29,14 +31,14 @@ struct TabBar: View {
             PokemonWorldView()
                 .tabItem( {
                     
-                    Text("PokémonWorld")
+                    Label("PokémonWorld", systemImage: "globe.europe.africa")
                 })
                 .tag(Tab.pokemonWorld)
             
             BackpackView()
                 .tabItem( {
                     
-                    Text("Pokedex")
+                    Label("Pokédex", systemImage: "magazine")
                 })
                 .tag(Tab.backpack)
         }

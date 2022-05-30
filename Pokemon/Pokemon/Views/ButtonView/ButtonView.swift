@@ -46,10 +46,6 @@ struct ButtonView: View {
                     self.action()
                 })
         )
-        /*.onTapGesture {
-            
-            self.action()
-        }*/
     }
 }
 

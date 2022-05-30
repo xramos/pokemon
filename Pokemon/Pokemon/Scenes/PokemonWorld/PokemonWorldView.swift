@@ -50,8 +50,9 @@ struct PokemonWorldView: View {
                 Your very own Pokémon legend is about to unfold!
                 A world of dreams and adventures with Pokémon awaits! Let's go!\"
                 """)
+            .minimumScaleFactor(0.5)
             
-            Spacer()
+            Spacer().frame(height: 16)
             
             ButtonView(imageName: "pokeball",
                        text: "Find Pokémon") {
@@ -115,7 +116,7 @@ struct PokemonWorldView: View {
                             weight: viewModel.pokemon?.weight ?? 0,
                             height: viewModel.pokemon?.height ?? 0)
             
-            Spacer()
+            Spacer().frame(height: 16)
             
             HStack {
                 
