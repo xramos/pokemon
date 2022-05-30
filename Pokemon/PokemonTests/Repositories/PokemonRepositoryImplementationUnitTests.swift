@@ -57,6 +57,7 @@ class PokemonRepositoryImplementationUnitTests: XCTestCase {
                 }
                 
             }, receiveValue: { pokemon in
+                
                 XCTAssertEqual(pokemon.id, 2)
             })
         
@@ -129,31 +130,7 @@ extension PokemonRepositoryImplementationUnitTests {
     
     func getPokemonData() -> Data {
         
-        let dataString = """
-{
-"base_experience": 142,
-"height": 10,
-"id": 2,
-"name": "ivysaur",
-"weight": 130,
-"sprites": {
-    "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
-},
-"types": [
-    {
-    "slot": 1,
-    "type": {
-        "name": "grass"
-        }
-    },
-    {
-    "slot": 2,
-        "type": {
-            "name: "poison"
-        }
-    }
-]
-"""
+        let dataString = "{\"id\": 2,\"name\": \"ivysaur\",\"weight\": 130,\"height\": 10,\"base_experience\": 142,\"sprites\": {\"front_default\": \"url\"},\"types\": []}"
         return Data(dataString.utf8)
     }
 }

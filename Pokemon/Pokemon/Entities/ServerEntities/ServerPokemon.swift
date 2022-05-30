@@ -29,8 +29,10 @@ struct ServerPokemon: Codable {
                 pokemonTypes = "\(pokemonTypes), \(type.type.name)"
             }
             
-            pokemonTypes.remove(at: pokemonTypes.startIndex)
-            pokemonTypes.remove(at: pokemonTypes.startIndex)
+            if types.count > 0 {
+                pokemonTypes.remove(at: pokemonTypes.startIndex)
+                pokemonTypes.remove(at: pokemonTypes.startIndex)
+            }
         }
         
         return Pokemon(id: id,
