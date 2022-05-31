@@ -42,7 +42,7 @@ struct PokemonCardView: View {
             Spacer().frame(height: 10)
             
         }.pokemonBackground()
-        .padding(10)
+        .padding(5)
     }
 }
 

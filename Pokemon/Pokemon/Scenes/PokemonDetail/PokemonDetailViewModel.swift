@@ -12,14 +12,7 @@ class PokemonDetailViewModel: ObservableObject {
     
     // MARK: - Properties
     
-    public private(set) var pokemon: Pokemon = Pokemon(id: 0,
-                                                       name: "",
-                                                       weight: 0,
-                                                       height: 0,
-                                                       experience: 0,
-                                                       url: "",
-                                                       date: "",
-                                                       types: "")
+    public private(set) var pokemon: Pokemon!
     
     // MARK: - Methods
  

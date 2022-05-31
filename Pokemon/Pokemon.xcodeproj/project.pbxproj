@@ -210,10 +210,10 @@
 		DAD0D32B283FC74300436272 /* PokemonTests */ = {
 			isa = PBXGroup;
 			children = (
-				DAE2433E28412FB900AD4FE1 /* Extensions */,
-				DAE2432D284128A300AD4FE1 /* PokemonTests-Bridging-Header.h */,
 				DAE24326284125DD00AD4FE1 /* DataBase */,
 				DAE24325284125DD00AD4FE1 /* Entities */,
+				DAE2433E28412FB900AD4FE1 /* Extensions */,
+				DAE2432D284128A300AD4FE1 /* PokemonTests-Bridging-Header.h */,
 				DAE24324284125DD00AD4FE1 /* Repositories */,
 				DAE24327284125DD00AD4FE1 /* UseCases */,
 			);
